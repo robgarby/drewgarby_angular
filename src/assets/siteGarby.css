@@ -1,0 +1,27 @@
+
+:root{
+    --dgBlue : #3D4F5D;
+}
+.pageContent {
+     margin-top: 65px;
+}
+.lockOver {
+     position: absolute;
+     top: -290px;
+     left: 15px;
+     z-index: 100;
+}
+.round6 {
+     border-radius: 6px;
+}
+.max500 {
+     height: 100vh;
+}
+
+.line-breaks{
+    white-space: pre-line; 
+    font-size: small;
+    font-family: 'Oswald', sans-serif;
+    font-size: large;
+    font-weight: 300;
+}

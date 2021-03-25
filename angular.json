@@ -24,7 +24,7 @@
             "tsConfig": "tsconfig.app.json",
             "aot": true,
             "assets": [
-              "src/favicon.ico",
+              "src/Icon_icon.png",
               "src/assets"
             ],
             "styles": [
@@ -87,7 +87,7 @@
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "assets": [
-              "src/favicon.ico",
+              "src/Icon_icon.png",
               "src/assets"
             ],
             "styles": [
@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "drewGarby"
+  "defaultProject": "drewGarby",
+  "cli": {
+    "analytics": "c57a15ce-2fde-4850-a2b3-422e5ee0c491"
+  }
 }

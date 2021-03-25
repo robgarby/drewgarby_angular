@@ -1,0 +1,55 @@
+<div id="imageScaleSize">
+    <div class="d-none d-xl-block backgroundFull" style="height: 600px;">
+        <div class="offset-1 col-8 bg-dark p-3 largeFont centerBox  text-justify text-white line-breaks">{{captionText}}</div>
+    </div>
+    <div class="d-none d-lg-block d-xl-none backgroundFull" style="height: 550px;">
+        <div class="offset-1 col-9 bg-dark p-3 largeFont centerBox text-justify text-white line-breaks">{{captionText}}</div>
+    </div>
+    <div class="d-none d-md-block d-lg-none backgroundFull" style="height: 400px;">
+        <div class="offset-1 col-10 bg-dark p-3  centerBox text-justify text-white line-breaks">{{captionText}}</div>
+    </div>
+    <div class="d-none d-sm-block d-md-none backgroundFull" style="height: 350px;">
+        <div class="offset-1 col-12 bg-dark p-3 centerBox text-justifys text-white line-breaks">{{captionText}}</div>
+    </div>
+    <div class="d-block d-sm-none backgroundFull" style="height: 250px;"></div>
+</div>
+<div class="col-24 bg-dark p-2 text-white">
+    <div class="col-24 col-md-8">
+        <div class="infoBox Drew mb-1">
+            <div class="centerStuff">About Drew <i class="fas fa-question-circle"></i></div>
+        </div>
+    </div>
+    <div class="col-24 col-md-8">
+        <div class="infoBox Support mb-1">
+            <div class="centerStuff">Support Drew <i class="fas fa-thumbs-up"></i></div>
+        </div>
+    </div>
+    <div class="col-24 col-md-8">
+        <div class="infoBox Contact mb-1">
+            <div class="centerStuff">Talk To Drew <i class="fas fa-phone-square-alt"></i></div>
+        </div>
+    </div>
+</div>
+<div class="col-24 p-3 bg-light h2 text-center">It All Starts with A Vision</div>
+<div class="d-none d-sm-block col-sm-22 offset-sm-1 dreamBox p-3 col-table-container" myMatchHeight="card">
+    <div class="col-24 col-sm-12 col-xl-8 float-left card" *ngFor = "let card1 of dreamData; let i = index" >
+        <div class="col-24 insideBox">
+            <div class="icon"><i [ngClass] = "getIcon(card1.icon)"></i></div>
+            <div class="heading text-center">{{card1.title}}</div>
+            <div class="col-20 offset-2 mt-2">
+                <p class="mt-1 line-breaks text-justify">{{card1.content}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="d-block d-sm-none col-22 offset-1 dreamBox p-3 col-table-container">
+    <div class="col-24 col-sm-12 col-xl-8 float-left mb-2" *ngFor = "let card2 of dreamData; let i = index" >
+        <div class="col-24 insideBox">
+            <div class="icon"><i [ngClass] = "getIcon(card2.icon)"></i></div>
+            <div class="heading text-center">{{card2.title}}</div>
+            <div class="col-20 offset-2 mt-2">
+                <p class="mt-1 line-breaks text-justify">{{card2.content}}</p>
+            </div>
+        </div>
+    </div>
+</div>

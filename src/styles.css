@@ -1,1 +1,48 @@
-/* You can add global styles to this file, and also import other style files */
+@import './assets/bootstrap4_24_ip.css';
+@import './assets/siteGarby.css';
+
+
+
+body{
+    background-color: white;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 200;
+}
+
+.round6 {
+    border-radius: 6px;
+}
+
+.font-small{
+    font-size: small;
+}
+
+.font-large {
+    font-size: large;
+}
+
+.font-x-small {
+    font-size: x-small;
+}
+
+.font-medium {
+    font-size: medium;
+}
+
+.underNav {
+    margin-top: 60px;
+}
+
+.fullPage {
+    background-color: white;
+    height: 100vh;
+    overflow: scroll;
+}
+
+.shiftBelowLogo{
+    margin-top: 30px;
+}
+
+.cursor {
+    cursor: pointer;
+}

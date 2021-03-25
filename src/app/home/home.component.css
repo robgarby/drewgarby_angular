@@ -1,0 +1,94 @@
+.backgroundFull {
+    background: url("/assets/IMAGES/homePage1.png");
+    background-color: rgba(255, 255, 255, 0.1);
+    background-blend-mode: lighten;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.centerBox {
+    font-size: medium;
+    top: 30%;
+    border-radius: 6px;
+    position: relative;
+    top: translate(-50%,50%)
+}
+
+
+.infoBox {
+    background-color: rgb(240, 16, 16,0.3);
+    background-blend-mode: lighten;
+    height: 150px;
+    width: 100%;
+    cursor: pointer;
+    /* background-image: url("/assets/IMAGES/aboutGarby.png");
+    background-size: cover;
+    background-repeat: no-repeat; */
+}
+
+.infoBox.Drew {
+    /* background-image: url("/assets/IMAGES/aboutGarby.png"); */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.infoBox.Support {
+    /* background-image: url("/assets/IMAGES/aboutGarby.png"); */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.infoBox.Contact {
+    /* background-image: url("/assets/IMAGES/talk_to_drew.png"); */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.infoBox:hover{
+    background-color: rgb(240, 16, 16,0.1);
+}
+
+.centerStuff{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    text-align: center;
+}
+
+.dreamBox {
+    background-color: whitesmoke;
+    border: 2px solid whitesmoke;
+    border-radius: 6px;
+    padding: 10px;
+}
+
+.dreamBox .heading {
+    font-size: large;
+    color : var(--dgBlue);
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+}
+
+.dreamBox .icon{
+    color:var(--dgBlue);
+    font-size: 32px;
+    text-align: center;
+}
+
+.insideBox{
+    background-color: white;
+    text-align: justify;
+}
+
+.largeFont{
+    font-size: large;
+}
+
+.card {
+    padding: 5px
+}
+

@@ -1,0 +1,63 @@
+.topNav {
+    height: 60px;
+    line-height: 60px;
+    background-color:white;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 2000;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+}
+
+.navButton {
+    background-color: white;
+    color: red;
+    text-align: center;
+    border: 2px solid red;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    line-height: 40px;
+    height: 45px;
+}
+
+.navButtonInverse {
+
+    color: white;
+    background-color: red;
+    text-align: center;
+    border: 2px solid red;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    line-height: 40px;
+    height: 45px;
+}
+
+.navButton:hover {
+    background-color: red;
+    color: white;
+}
+
+.navButtonInverse:hover {
+    color: red;
+    background-color: white;
+}
+
+.iconFontRed {
+    font-size: 45px;
+    color: red;
+    cursor: pointer;
+}
+
+.zTop {
+    z-index: 1000;
+}
+
+.rb6 {
+    border-radius: 0px 0px 6px 0px;
+}
