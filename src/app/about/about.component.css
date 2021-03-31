@@ -1,0 +1,37 @@
+.backgroundFull {
+    background: url("/assets/IMAGES/aboutDrew.png");
+    background-color: rgba(255, 255, 255, 0.1);
+    background-blend-mode: lighten;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.infoBox {
+    background-color: rgb(240, 16, 16,0.3);
+    background-blend-mode: lighten;
+    height: 150px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.infoBox.Drew {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.infoBox.Support {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.infoBox.Contact {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.infoBox:hover{
+    background-color: rgb(240, 16, 16,0.1);
+}

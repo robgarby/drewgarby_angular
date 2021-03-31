@@ -1,5 +1,5 @@
 .backgroundFull {
-    background: url("/assets/IMAGES/homePage1.png");
+    background: url("/assets/IMAGES/drew_harvard.png");
     background-color: rgba(255, 255, 255, 0.1);
     background-blend-mode: lighten;
     -webkit-background-size: cover;
@@ -35,5 +35,3 @@
 .infoBox:hover{
     background-color: rgb(240, 16, 16,0.1);
 }
-
-

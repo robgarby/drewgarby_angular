@@ -14,37 +14,47 @@ export class HomeComponent implements OnInit {
   dreamData : any = [];
   pageScript : any = [];
   captionText : string = '';
+  currentPage : string = 'HOME';
+
+  navigateSocial(inval: string) {
+      this.global.navigateSocial(inval);
+  }
 
   ngOnInit(): void {
       this.getDream();
       this.getPageCaption();
   }
 
-  getIcon(inval:string){
+  getIcon(inval: string) {
       return inval;
   }
 
   async getDream() {
-    let params = new HttpParams;
-    params = params.append('script', 'dreamData');
-    await this.http.get('https://www.drewgarby.com/DG/phpScripts/getData.php',{params : params}).subscribe(
-      (response) => {
-        this.dreamData = Object.values(response);
-      }
-    )
+      let params = new HttpParams;
+      params = params.append('script', 'dreamData');
+      params = params.append('page', this.currentPage);
+      await this.http.get('https://www.drewgarby.com/DG/phpScripts/getData.php', { params: params }).subscribe(
+          (response) => {
+              this.dreamData = Object.values(response);
+          }
+      )
   }
 
   async getPageCaption() {
-    let params = new HttpParams;
-    params = params.append('script', 'getPage');
-    params = params.append('page', 'HOME');
-    await this.http.get('https://www.drewgarby.com/DG/phpScripts/getData.php',{params : params}).subscribe(
-      (response) => {
-        this.pageScript = Object.values(response);
-        this.captionText = this.pageScript[0].content;
-      }
-    )
+      let params = new HttpParams;
+      params = params.append('script', 'getPage');
+      params = params.append('page', this.currentPage);
+      await this.http.get('https://www.drewgarby.com/DG/phpScripts/getData.php', { params: params }).subscribe(
+          (response) => {
+              this.pageScript = Object.values(response);
+              this.captionText = this.pageScript[0].content;
+          }
+      )
   }
+
+  setVolunteer(){
+    this.global.volunteerButtonEmitter.emit(!this.global.volunteerForm);
+}
 
 
 }

@@ -1,34 +1,34 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../data.service';
 import { HttpClient, HttpParams } from '@angular/common/http';
+import { DataService } from '../data.service';
 
 @Component({
-  selector: 'app-about',
-  templateUrl: './about.component.html',
-  styleUrls: ['./about.component.css']
+    selector: 'app-platform',
+    templateUrl: './platform.component.html',
+    styleUrls: ['./platform.component.css']
 })
-export class AboutComponent implements OnInit {
+export class PlatformComponent implements OnInit {
 
-    constructor(private global: DataService, private http: HttpClient) { }
+    constructor(private global : DataService, private http: HttpClient) { }
 
-    dreamData: any = [];
-    pageScript: any = [];
-    captionText: string = '';
-    currentPage : string = 'ABOUT';
-
+    dreamData : any = [];
+    pageScript : any = [];
+    captionText : string = '';
+    currentPage : string = 'PLATFORM';
+  
     navigateSocial(inval: string) {
         this.global.navigateSocial(inval);
     }
-
+  
     ngOnInit(): void {
         this.getDream();
         this.getPageCaption();
     }
-
+  
     getIcon(inval: string) {
         return inval;
     }
-
+  
     async getDream() {
         let params = new HttpParams;
         params = params.append('script', 'dreamData');
@@ -39,7 +39,7 @@ export class AboutComponent implements OnInit {
             }
         )
     }
-
+  
     async getPageCaption() {
         let params = new HttpParams;
         params = params.append('script', 'getPage');
@@ -51,10 +51,10 @@ export class AboutComponent implements OnInit {
             }
         )
     }
-
-    setVolunteer() {
-        this.global.volunteerButtonEmitter.emit(!this.global.volunteerForm);
-    }
   
-  
+    setVolunteer(){
+      this.global.volunteerButtonEmitter.emit(!this.global.volunteerForm);
   }
+
+
+}

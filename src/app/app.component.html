@@ -1,14 +1,93 @@
-<div class="topNav">
-    <div (click) = "navTo('HOME')" #siteLogo class="d-none d-md-block col-md-5 col-lg-4 col-xl-3 zTop cursor bg-white p-1 rb6 mr-2"> <img src="../assets/IMAGES/dg2021_logoh_100.png"
-            class="img-fluid zTop" alt=""> </div>
+<div class="mask" [hidden]="!mask"></div>
+<div class="topNav" [hidden]="mask">
+    <div (click)="navTo('HOME')" #siteLogo
+        class="d-none d-md-block col-md-5 col-lg-4 col-xl-3 zTop cursor bg-white p-1 rb6 mr-2"> <img
+            src="../assets/IMAGES/dg2021_logoh_100.png" class="img-fluid zTop" alt=""> </div>
     <div class="d-none d-md-block">
         <div class="navButton float-left mt-2 ml-2" *ngFor="let nav of navBarItems" (click)="navTo(nav.link)">
             {{nav.title}}</div>
         <div class="float-right navButtonInverse mr-4 mt-2">Donate</div>
+        <div class="float-right volunteerButton mr-2 mt-2" (click)="setVolunteer()">Volunteer</div>
     </div>
     <div class="d-md-none">
         <div class="float-right navButtonInverse mr-2 mt-2">Donate</div>
+        <div class="float-right volunteerButton mr-2 mt-2">Volunteer</div>
         <div class="float-left iconFontRed mt-1 ml-2"><i class="fas fa-bars"></i></div>
     </div>
 </div>
+<div class="volunteerForm centerPop col-14 p-3" [hidden]="!mask" >
+    <div class="insideFill" [hidden] = "global.thankYou">
+        <div class="row">
+            <div class="col-24">
+                <div class="col-12">
+                    <div class="formLabel">First Name</div>
+                </div>
+                <div class="col-12">
+                    <div class="formLabel">Last Name</div>
+                </div>
+            </div>
+            <div class="col-24 mt-1">
+                <div class="col-11">
+                    <input type="text" class="form-control" placeholder="First Name" [(ngModel)] = localVolunteer.firstName>
+                </div>
+                <div class="col-11 offset-1">
+                    <input type="text" class="form-control" placeholder="Last Name" [(ngModel)] = localVolunteer.lastName>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-1">
+            <div class="col-24 mt-2">
+                <div class="col-12">
+                    <div class="formLabel">Email Address</div>
+                </div>
+            </div>
+            <div class="col-24 mt-1">
+                <div class="col-23">
+                    <input type="text" class="form-control" placeholder="Email Address" [(ngModel)] = localVolunteer.email>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-24 mt-2">
+                <div class="col-12">
+                    <div class="formLabel">Phone Number</div>
+                </div>
+                <div class="col-12">
+                    <div class="formLabel">Postal Code</div>
+                </div>
+            </div>
+            <div class="col-24 mt-1">
+                <div class="col-11">
+                    <input type="text" class="form-control" placeholder="### ### ####" [(ngModel)] = localVolunteer.phone>
+                </div>
+                <div class="col-11 offset-1">
+                    <input type="text" class="form-control" placeholder="K0K 0K0" [(ngModel)] = localVolunteer.postal>
+                </div>
+            </div>
+        </div>
+        <div class="col-24 mt-5">
+            <div class="col-24">
+                <div class="col-11 offset-1">
+                    <div class="col-24 btn libSuccess" (click) = "global.saveVolunteer(localVolunteer)">Submit Form</div>
+                </div>
+                <div class="col-11">
+                    <div class="col-24 btn btn-secondary" (click)="setVolunteer()">Cancel</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="insideFill col-24" [hidden] = "!global.thankYou">
+        <div class="header">Thank You {{localVolunteer.firstName}}</div>
+        <p class="mt-4 col-24">A member of Drew's Campaign will be in touch shortly to see how you can help the campaign</p>
+        <p>Without You or something like that... great.</p>
+        <div class="col-24">
+            <div class="col-12 offset-6">
+                <div class="col-24 btn libSuccess" (click)="resetVolunteer()">OK</div>
+            </div>
+        </div>
+    </div>
+   
+
+</div>
+
 <router-outlet></router-outlet>

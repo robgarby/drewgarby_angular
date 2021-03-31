@@ -38,6 +38,24 @@
     height: 45px;
 }
 
+.volunteerButton {
+    color: white;
+    background-color: var(--dgBlue);
+    text-align: center;
+    border: 2px solid  var(--dgBlue);
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    line-height: 40px;
+    height: 45px;
+}
+
+.volunteerButton:hover {
+    color: var(--dgBlue);
+    background-color: white;
+}
+
 .navButton:hover {
     background-color: red;
     color: white;
@@ -60,4 +78,38 @@
 
 .rb6 {
     border-radius: 0px 0px 6px 0px;
+}
+
+.volunteerForm{
+    /* background-color: var(--dgBlue); */
+    background-color: darkred;
+    border-radius: 6px;
+    border : 8px solid white;
+}
+
+.insideFill {
+    padding: 10px;
+    background-color: white;
+    border-radius: 6px;
+}
+
+.insideFill .header {
+    font-size: xx-large;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.insideFill p {
+    line-height: 20px;
+    font-size: medium;
+    text-align: center;
+}
+
+.formLabel {
+    font-size: small;
+    text-align: left;
+}
+
+.group {
+    width: 100%;
 }

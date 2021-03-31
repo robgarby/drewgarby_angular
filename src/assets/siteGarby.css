@@ -1,6 +1,7 @@
 
 :root{
     --dgBlue : #3D4F5D;
+    --dgGold : #C7B26F;
 }
 .pageContent {
      margin-top: 65px;
@@ -24,4 +25,32 @@
     font-family: 'Oswald', sans-serif;
     font-size: large;
     font-weight: 300;
+}
+
+.footer {
+    background-color: var(--dgBlue);
+    height: 45px;
+    line-height: 45px;
+    color: white;
+    width: 100%;
+    float: left;
+    cursor: pointer;
+}
+
+.bg-libBlue {
+    background-color: var(--dgBlue);
+}
+
+.libSuccess{
+    background-color: var(--dgGold);
+}
+
+.mask{
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index:1000;
 }
