@@ -25,16 +25,19 @@
     font-family: 'Oswald', sans-serif;
     font-size: large;
     font-weight: 300;
+    line-height: 25px;
 }
 
 .footer {
     background-color: var(--dgBlue);
-    height: 45px;
-    line-height: 45px;
+    height: 65px;
+    line-height: 65px;
     color: white;
     width: 100%;
     float: left;
     cursor: pointer;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .bg-libBlue {

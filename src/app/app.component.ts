@@ -30,8 +30,21 @@ export class AppComponent implements OnInit {
         this.volunteerForm = this.global.volunteerForm;
     }
 
+    donateDrew(){
+        window.location.href = "https://secure.liberal.ca/VictoryFund?campId=7010a000002puUrAAI&edaCampId=7010a000002puUw&sponsorContactId=0030a00001qxeXxAAI&eda=35088";
+    }
+
+    supportDrew(){
+        window.location.href = "https://secure.liberal.ca/page/nomination-register?campid=7015b000002pwbIAAQ";
+    }
+
     navTo(inval: string) {
-        this.router.navigateByUrl(inval);
+        if (inval !== 'SUPPORT'){
+            this.router.navigateByUrl(inval);
+        } else {
+            this.supportDrew();
+        }
+        
     }
 
     setVolunteer(){

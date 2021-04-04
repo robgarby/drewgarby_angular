@@ -6,7 +6,7 @@
     <div class="d-none d-md-block">
         <div class="navButton float-left mt-2 ml-2" *ngFor="let nav of navBarItems" (click)="navTo(nav.link)">
             {{nav.title}}</div>
-        <div class="float-right navButtonInverse mr-4 mt-2">Donate</div>
+        <div class="float-right navButtonInverse mr-4 mt-2" (click) = "donateDrew()">Donate</div>
         <div class="float-right volunteerButton mr-2 mt-2" (click)="setVolunteer()">Volunteer</div>
     </div>
     <div class="d-md-none">

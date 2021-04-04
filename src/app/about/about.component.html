@@ -1,22 +1,130 @@
-<div id="imageScaleSize">
+<div id="imageScaleSize" [hidden]="!checkBox('TOP')">
     <div class="d-none d-xl-block backgroundFull" style="height: 600px;">
-        <div class="offset-1 col-8 bg-dark p-3 largeFont centerBox  text-justify text-white line-breaks">{{captionText}}</div>
+        <div class="offset-1 col-8 p-3 largeFont centerBox  text-justify text-white line-breaks">
+            <div class="col-24 mb-1 bg-libBlue round6 p-2">
+                {{captionText}}
+            </div>
+            <div class="col-24 mt-3 bg-libBlue p-2 round6">
+                <div class="float-right mr-1 ml-2 cursor">
+                    <i class="fab fa-instagram font-x-large" matTooltip="Drew Garby on Instagram"
+                        (click)="navigateSocial('instagram')"></i>
+                </div>
+                <div class="float-right mr-1 ml-2 cursor">
+                    <i class="fab fa-facebook font-x-large" matTooltip="Drew Garby on Facebook"
+                        (click)="navigateSocial('facebook')"></i>
+                </div>
+                <div class="float-right mr-1 ml-2 cursor">
+                    <i class="fab fa-twitter font-x-large" matTooltip="Drew Garby on Twitter"
+                        (click)="navigateSocial('twitter')"></i>
+                </div>
+                <div class="float-right mr-1 ml-2 cursor">
+                    <i class="fab fa-linkedin-in font-x-large" matTooltip="Drew Garby on linkedIn"
+                        (click)="navigateSocial('linkedIn')"></i>
+                </div>
+                <div class="float-left font-large">
+                    Connect With Drew
+                </div>
+            </div>
+        </div>
+
     </div>
     <div class="d-none d-lg-block d-xl-none backgroundFull" style="height: 550px;">
-        <div class="offset-1 col-9 bg-dark p-3 largeFont centerBox text-justify text-white line-breaks">{{captionText}}</div>
+        <div class="offset-1 col-9 p-3 largeFont centerBox text-justify text-white line-breaks">
+            <div class="col-24 mb-1 bg-libBlue round6 p-2">
+                {{captionText}}
+            </div>
+            <div class="col-24 mt-3 bg-libBlue p-2 round6">
+                <div class="float-right mr-1 ml-2 cursor">
+                    <i class="fab fa-instagram font-x-large" matTooltip="Drew Garby on Instagram"
+                        (click)="navigateSocial('instagram')"></i>
+                </div>
+                <div class="float-right mr-1 ml-2 cursor">
+                    <i class="fab fa-facebook font-x-large" matTooltip="Drew Garby on Facebook"
+                        (click)="navigateSocial('facebook')"></i>
+                </div>
+                <div class="float-right mr-1 ml-2 cursor">
+                    <i class="fab fa-twitter font-x-large" matTooltip="Drew Garby on Twitter"
+                        (click)="navigateSocial('twitter')"></i>
+                </div>
+                <div class="float-right mr-1 ml-2 cursor">
+                    <i class="fab fa-linkedin-in font-x-large" matTooltip="Drew Garby on linkedIn"
+                        (click)="navigateSocial('linkedIn')"></i>
+                </div>
+                <div class="float-left font-large">
+                    Connect With Drew
+                </div>
+            </div>
+        </div>
     </div>
     <div class="d-none d-md-block d-lg-none backgroundFull" style="height: 400px;">
-        <div class="offset-1 col-10 bg-dark p-3  centerBox text-justify text-white line-breaks">{{captionText}}</div>
+        <div class="offset-1 col-11 p-3  centerBox text-justify text-white line-breaks">
+            <div class="col-24 mb-1 bg-libBlue round6 p-2">
+                {{captionText}}
+            </div>
+            <div class="col-24 mt-3 bg-libBlue p-2 round6">
+                <div class="float-right mr-1 ml-2 cursor">
+                    <i class="fab fa-instagram font-x-large" matTooltip="Drew Garby on Instagram"
+                        (click)="navigateSocial('instagram')"></i>
+                </div>
+                <div class="float-right mr-1 ml-2 cursor">
+                    <i class="fab fa-facebook font-x-large" matTooltip="Drew Garby on Facebook"
+                        (click)="navigateSocial('facebook')"></i>
+                </div>
+                <div class="float-right mr-1 ml-2 cursor">
+                    <i class="fab fa-twitter font-x-large" matTooltip="Drew Garby on Twitter"
+                        (click)="navigateSocial('twitter')"></i>
+                </div>
+                <div class="float-right mr-1 ml-2 cursor">
+                    <i class="fab fa-linkedin-in font-x-large" matTooltip="Drew Garby on linkedIn"
+                        (click)="navigateSocial('linkedIn')"></i>
+                </div>
+                <div class="float-left font-medium">
+                    Connect With Drew
+                </div>
+            </div>
+        </div>
     </div>
     <div class="d-none d-sm-block d-md-none backgroundFull" style="height: 350px;">
-        <div class="offset-1 col-12 bg-dark p-3 centerBox text-justifys text-white line-breaks">{{captionText}}</div>
+        <div class="offset-1 col-12 p-3 centerBox text-justify text-white line-breaks">
+            <div class="col-24 mb-1 bg-libBlue round6 p-2">
+                {{captionText}}
+            </div>
+        </div>
     </div>
-    <div class="d-block d-sm-none backgroundFull" style="height: 250px;"></div>
+    <div class="d-block d-sm-none backgroundFull" style="height: 250px;">
+
+    </div>
 </div>
-<!-- <div class="col-24 bg-dark p-2 text-white">
+<div class="row bg-dark p-2 text-white">
+    <div class="col-24 bg-libBlue p-3 mb-1 d-md-none">
+        <div class="float-right mr-1 ml-2 cursor">
+            <i class="fab fa-instagram font-x-large" matTooltip="Drew Garby on Instagram"
+                (click)="navigateSocial('instagram')"></i>
+        </div>
+        <div class="float-right mr-1 ml-2 cursor">
+            <i class="fab fa-facebook font-x-large" matTooltip="Drew Garby on Facebook"
+                (click)="navigateSocial('facebook')"></i>
+        </div>
+        <div class="float-right mr-1 ml-2 cursor">
+            <i class="fab fa-twitter font-x-large" matTooltip="Drew Garby on Twitter"
+                (click)="navigateSocial('twitter')"></i>
+        </div>
+        <div class="float-right mr-1 ml-2 cursor">
+            <i class="fab fa-linkedin-in font-x-large" matTooltip="Drew Garby on linkedIn"
+                (click)="navigateSocial('linkedIn')"></i>
+        </div>
+        <div class="float-left font-medium">
+            Connect With Drew
+        </div>
+    </div>
+</div>
+<div class="col-24 p-3 bg-dark text-white line-breaks" [hidden]="!checkBox('SPECIAL')">
+    <div class="col-22 offset-1 text-justify line-breaks">{{specialData}}</div>
+</div>
+<div id="3Box" class="row bg-dark p-2 text-white" [hidden]="!checkBox('3BOX')">
     <div class="col-24 col-md-8">
-        <div class="infoBox Drew mb-1">
-            <div class="centerStuff">About Drew <i class="fas fa-question-circle"></i></div>
+        <div class="infoBox Drew mb-1" (click)="setVolunteer()">
+            <div class="centerStuff">Volunteer for Drew <i class="fas fa-question-circle"></i></div>
         </div>
     </div>
     <div class="col-24 col-md-8">
@@ -29,27 +137,56 @@
             <div class="centerStuff">Talk To Drew <i class="fas fa-phone-square-alt"></i></div>
         </div>
     </div>
-</div> -->
-<div class="col-24 p-3 bg-light h2 text-center">Drew believes in his community</div>
-<div class="d-none d-sm-block col-sm-22 offset-sm-1 dreamBox p-3 col-table-container" myMatchHeight="card">
-    <div class="col-24 col-sm-12 col-xl-8 float-left card" *ngFor = "let card1 of dreamData; let i = index" >
-        <div class="col-24 insideBox">
-            <div class="icon"><i [ngClass] = "getIcon(card1.icon)"></i></div>
-            <div class="heading text-center">{{card1.title}}</div>
-            <div class="col-20 offset-2 mt-2">
-                <p class="mt-1 line-breaks text-justify">{{card1.content}}</p>
+</div>
+<div id="dreamBox" [hidden]="!checkBox('DREAMS')">
+    <div class="col-24 p-3 bg-light h2 text-center">It All Starts with A Vision</div>
+    <div class="d-none d-sm-block col-sm-22 offset-sm-1 dreamBox p-3 col-table-container" myMatchHeight="card">
+        <div class="col-24 col-sm-12 col-xl-8 float-left card" *ngFor="let card1 of dreamData; let i = index">
+            <div class="col-24 insideBox">
+                <div class="icon"><i [ngClass]="getIcon(card1.icon)"></i></div>
+                <div class="heading text-center">{{card1.title}}</div>
+                <div class="col-20 offset-2 mt-2">
+                    <p class="mt-1 line-breaks text-justify">{{card1.content}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="d-block d-sm-none col-22 offset-1 dreamBox p-3">
+        <div class="col-24 col-sm-12 col-xl-8 float-left mb-2" *ngFor="let card2 of dreamData; let i = index">
+            <div class="col-24 insideBox">
+                <div class="icon"><i [ngClass]="getIcon(card2.icon)"></i></div>
+                <div class="heading text-center">{{card2.title}}</div>
+                <div class="col-20 offset-2 mt-2">
+                    <p class="mt-1 line-breaks text-justify">{{card2.content}}</p>
+                </div>
             </div>
         </div>
     </div>
 </div>
-<div class="d-block d-sm-none col-22 offset-1 dreamBox p-3 col-table-container">
-    <div class="col-24 col-sm-12 col-xl-8 float-left mb-2" *ngFor = "let card2 of dreamData; let i = index" >
-        <div class="col-24 insideBox">
-            <div class="icon"><i [ngClass] = "getIcon(card2.icon)"></i></div>
-            <div class="heading text-center">{{card2.title}}</div>
-            <div class="col-20 offset-2 mt-2">
-                <p class="mt-1 line-breaks text-justify">{{card2.content}}</p>
+<div class="footer" [hidden]="!checkBox('FOOTER')">
+    <div class="col-24">
+        <div id="icons" class="d-none d-lg-block">
+            <div class="float-right mr-1 ml-2 cursor">
+                <i class="fab fa-instagram font-x-large" matTooltip="Drew Garby on Instagram"
+                    (click)="navigateSocial('instagram')"></i>
+            </div>
+            <div class="float-right mr-1 ml-2 cursor">
+                <i class="fab fa-facebook font-x-large" matTooltip="Drew Garby on Facebook"
+                    (click)="navigateSocial('facebook')"></i>
+            </div>
+            <div class="float-right mr-1 ml-2 cursor">
+                <i class="fab fa-twitter font-x-large" matTooltip="Drew Garby on Twitter"
+                    (click)="navigateSocial('twitter')"></i>
+            </div>
+            <div class="float-right mr-1 ml-2 cursor">
+                <i class="fab fa-linkedin-in font-x-large" matTooltip="Drew Garby on linkedIn"
+                    (click)="navigateSocial('linkedIn')"></i>
             </div>
         </div>
+        <div class="float-left font-medium d-none d-lg-block">
+            Connect With Drew
+        </div>
+        <div class="text-center font-x-small">All Images copyright drewgarby.com @ 2021, All Images without a mask are
+            taken prior to Covid-19 Pandemic</div>
     </div>
 </div>
