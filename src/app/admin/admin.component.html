@@ -1,0 +1,18 @@
+<div class="mask" [hidden]="!mask"></div>
+<div class="container-fluid" [hidden] = "!showHideButton">
+    <div class="bg-libBlue centerPop col-14 p-3">
+        <div class="col-9 text-right text-white float-left mt-2">Admin Password</div>
+        <div class="col-6">
+            <div class="col-24">
+                <input type="text" [(ngModel)] = adminPassword class="form-control">
+            </div>
+        </div>
+        <div class="col-3 float-left">
+            <div class="btn btn-primary col-24"   (click) = "checkPassword()">GO</div>
+        </div>
+    </div>
+</div>
+<div id="adminContent">
+    <div class="blueNav">Test</div>
+</div>
+    

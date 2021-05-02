@@ -10,7 +10,11 @@ export class DataService {
     constructor(private router: Router, private http:HttpClient) { }
 
     volunteerButtonEmitter = new EventEmitter();
+    hideNavEmiiter = new EventEmitter();
     volunteerForm: boolean = false;
+
+    thePage : string = 'HOME';
+
 
     navBar: any = [
         { "link": 'ABOUT', "title": 'About Drew' },
@@ -23,15 +27,15 @@ export class DataService {
     navigateSocial(inval: string) {
         switch (inval) {
             case 'facebook': window.location.href = 'https://www.facebook.com/drew.garby2021', '_blank'; break;
-            case 'twitter': window.location.href = 'https://twitter.com/Drew_Garby', 'target="_blank"'; break;
+            case 'twitter': window.location.href = 'https://twitter.com/DrewGarby', 'target="_blank"'; break;
             case 'instagram': window.location.href = 'https://www.instagram.com/drew.garby/?hl=en', '_blank'; break;
             case 'linkedIn': window.location.href = 'https://ca.linkedin.com/in/drew-garby-55b5b73a', '_blank'; break;
-
         }
     }
 
     client : any = {};
     thankYou : boolean = false;
+    hideBar :boolean = false;
 
 
     async saveVolunteer(inArray:any){

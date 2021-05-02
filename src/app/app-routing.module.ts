@@ -1,18 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AboutComponent } from './about/about.component';
-import { HomeComponent } from './home/home.component';
-import { PlatformComponent } from './platform/platform.component';
+import { AdminComponent } from './admin/admin.component';
+import { PageComponent } from './page/page.component';
 
 const routes: Routes = [
-    {path: 'HOME', component:HomeComponent},
-    {path:'ABOUT',component:AboutComponent},
-    {path:'PLATFORM',component:PlatformComponent},
-    
+    {path:'PAGE',component:PageComponent},
+    {path:'ADMIN',component:AdminComponent},
+    {path:'**',component:PageComponent}, 
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,{useHash: true})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

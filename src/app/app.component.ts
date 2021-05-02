@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { DataService } from './data.service';
@@ -10,16 +10,16 @@ import { DataService } from './data.service';
 })
 export class AppComponent implements OnInit {
     constructor(private router: Router, public global: DataService) { }
-    title = 'Drew Garby';
+    title = 'Drew Garby / Carleton Riding Candidate';
 
     navBarItems: any = this.global.navBar;
     volunteerForm: boolean = false;
     mask: boolean = false;
-    localVolunteer : any = {};
+    localVolunteer: any = {};
+    localHideBar: boolean = false;
 
     ngOnInit() {
         this.localVolunteer = this.global.volunteer;
-        this.router.navigateByUrl('HOME');
         this.global.volunteerButtonEmitter.subscribe(
             (response: boolean) => {
                 this.global.volunteerForm = response;
@@ -27,31 +27,67 @@ export class AppComponent implements OnInit {
                 this.volunteerForm = this.global.volunteerForm;
             }
         )
+        this.global.hideNavEmiiter.subscribe(
+            (response: boolean) => {
+                this.localHideBar = response;
+            }
+        )
+        this.global.hideNavEmiiter.emit(false);
         this.volunteerForm = this.global.volunteerForm;
     }
 
-    donateDrew(){
+    hideBoxMenu : boolean = true;
+
+    showBarsBox(){
+        this.hideBoxMenu = !this.hideBoxMenu;
+    }
+
+    donateDrew() {
         window.location.href = "https://secure.liberal.ca/VictoryFund?campId=7010a000002puUrAAI&edaCampId=7010a000002puUw&sponsorContactId=0030a00001qxeXxAAI&eda=35088";
     }
 
-    supportDrew(){
+    supportDrew() {
         window.location.href = "https://secure.liberal.ca/page/nomination-register?campid=7015b000002pwbIAAQ";
     }
 
     navTo(inval: string) {
-        if (inval !== 'SUPPORT'){
-            this.router.navigateByUrl(inval);
+        this.global.thePage = inval;
+        let currentUrl = this.router.url;
+        if (inval !== 'SUPPORT') {
+            if (currentUrl === '/') {
+                this.router.navigateByUrl('PAGE');
+            } else {
+                this.router.navigateByUrl('/', { skipLocationChange: true }).then(() => {
+                    this.router.navigate([currentUrl]);
+                });
+            }
         } else {
             this.supportDrew();
         }
-        
     }
 
-    setVolunteer(){
+    navToSmall(inval: string) {
+        this.hideBoxMenu = !this.hideBoxMenu;
+        this.global.thePage = inval;
+        let currentUrl = this.router.url;
+        if (inval !== 'SUPPORT') {
+            if (currentUrl === '/') {
+                this.router.navigateByUrl('PAGE');
+            } else {
+                this.router.navigateByUrl('/', { skipLocationChange: true }).then(() => {
+                    this.router.navigate([currentUrl]);
+                });
+            }
+        } else {
+            this.supportDrew();
+        }
+    }
+
+    setVolunteer() {
         this.global.volunteerButtonEmitter.emit(!this.global.volunteerForm);
     }
 
-    resetVolunteer(){
+    resetVolunteer() {
         this.global.thankYou = false;
         this.global.volunteer = {};
         this.global.volunteerButtonEmitter.emit(!this.global.volunteerForm);

@@ -1,0 +1,86 @@
+.backgroundFull {
+    background-color: rgba(255, 255, 255, 0.1);
+    background-blend-mode: lighten;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.theBackground1 {
+    background: url("/assets/IMAGES/homePage1.png");
+    background-color: rgba(255, 255, 255, 0.1);
+    background-blend-mode: lighten;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.theBackground2 {
+    background: url("/assets/IMAGES/aboutDrew.jpg");
+    background-color: rgba(255, 255, 255, 0.1);
+    background-blend-mode: lighten;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.theBackground3 {
+    background: url("/assets/IMAGES/drew_harvard.jpg");
+    background-color: rgba(255, 255, 255, 0.1);
+    background-blend-mode: lighten;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.infoBox {
+    background-color: rgb(240, 16, 16,0.3);
+    background-blend-mode: lighten;
+    height: 150px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.infoBox.Drew {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.infoBox.Support {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.infoBox.Contact {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.infoBox:hover{
+    background-color: rgb(240, 16, 16,0.1);
+}
+
+.insideBox{
+    background-color: white;
+    text-align: justify;
+    height: 300px;
+    overflow: scroll;
+    padding: 10px;
+}
+
+@media (max-width: 575px){
+    .insideBox{
+        background-color: white;
+        text-align: justify;
+        padding: 5px;
+        height: auto;
+    }
+  }

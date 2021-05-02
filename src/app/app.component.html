@@ -1,5 +1,5 @@
 <div class="mask" [hidden]="!mask"></div>
-<div class="topNav" [hidden]="mask">
+<div class="topNav" [hidden]="mask" [hidden] = "localHideBar">
     <div (click)="navTo('HOME')" #siteLogo
         class="d-none d-md-block col-md-5 col-lg-4 col-xl-3 zTop cursor bg-white p-1 rb6 mr-2"> <img
             src="../assets/IMAGES/dg2021_logoh_100.png" class="img-fluid zTop" alt=""> </div>
@@ -12,7 +12,11 @@
     <div class="d-md-none">
         <div class="float-right navButtonInverse mr-2 mt-2">Donate</div>
         <div class="float-right volunteerButton mr-2 mt-2">Volunteer</div>
-        <div class="float-left iconFontRed mt-1 ml-2"><i class="fas fa-bars"></i></div>
+        <div class="float-left iconFontRed mt-1 ml-2" (click) = "showBarsBox()"><i class="fas fa-bars"></i></div>
+    </div>
+    <div id="boxMenu" class="col-14 float-left d-md-none"  [hidden] = "hideBoxMenu" >
+        <div class="col-24 burgerLink" *ngFor="let nav of navBarItems" (click)="navToSmall(nav.link)">
+            {{nav.title}}</div>
     </div>
 </div>
 <div class="volunteerForm centerPop col-14 p-3" [hidden]="!mask" >
@@ -86,8 +90,6 @@
             </div>
         </div>
     </div>
-   
-
 </div>
 
 <router-outlet></router-outlet>

@@ -1,5 +1,5 @@
 <div id="imageScaleSize" [hidden]="!checkBox('TOP')">
-    <div class="d-none d-xl-block backgroundFull" style="height: 600px;">
+    <div class="d-none d-xl-block backgroundFull" [ngClass] = "setBackground(thePage)" style="height: 600px;">
         <div class="offset-1 col-8 p-3 largeFont centerBox  text-justify text-white line-breaks">
             <div class="col-24 mb-1 bg-libBlue round6 p-2">
                 {{captionText}}
@@ -28,7 +28,7 @@
         </div>
 
     </div>
-    <div class="d-none d-lg-block d-xl-none backgroundFull" style="height: 550px;">
+    <div class="d-none d-lg-block d-xl-none backgroundFull" [ngClass] = "setBackground(thePage)" style="height: 550px;">
         <div class="offset-1 col-9 p-3 largeFont centerBox text-justify text-white line-breaks">
             <div class="col-24 mb-1 bg-libBlue round6 p-2">
                 {{captionText}}
@@ -56,7 +56,7 @@
             </div>
         </div>
     </div>
-    <div class="d-none d-md-block d-lg-none backgroundFull" style="height: 400px;">
+    <div class="d-none d-md-block d-lg-none backgroundFull" [ngClass] = "setBackground(thePage)" style="height: 400px;">
         <div class="offset-1 col-11 p-3  centerBox text-justify text-white line-breaks">
             <div class="col-24 mb-1 bg-libBlue round6 p-2">
                 {{captionText}}
@@ -84,14 +84,14 @@
             </div>
         </div>
     </div>
-    <div class="d-none d-sm-block d-md-none backgroundFull" style="height: 350px;">
+    <div class="d-none d-sm-block d-md-none backgroundFull" [ngClass] = "setBackground(thePage)" style="height: 350px;">
         <div class="offset-1 col-12 p-3 centerBox text-justify text-white line-breaks">
             <div class="col-24 mb-1 bg-libBlue round6 p-2">
                 {{captionText}}
             </div>
         </div>
     </div>
-    <div class="d-block d-sm-none backgroundFull" style="height: 250px;">
+    <div class="d-block d-sm-none backgroundFull"  [ngClass] = "setBackground(thePage)" style="height: 250px;">
 
     </div>
 </div>
@@ -122,29 +122,29 @@
     <div class="col-22 offset-1 text-justify line-breaks">{{specialData}}</div>
 </div>
 <div id="3Box" class="row bg-dark p-2 text-white" [hidden]="!checkBox('3BOX')">
-    <div class="col-24 col-md-8">
+    <div class="col-24 col-md-12">
         <div class="infoBox Drew mb-1" (click)="setVolunteer()">
             <div class="centerStuff">Volunteer for Drew <i class="fas fa-question-circle"></i></div>
         </div>
     </div>
-    <div class="col-24 col-md-8">
-        <div class="infoBox Support mb-1">
+    <div class="col-24 col-md-12">
+        <div class="infoBox Support mb-1" (click) = "supportDrew()">
             <div class="centerStuff">Support Drew <i class="fas fa-thumbs-up"></i></div>
         </div>
     </div>
-    <div class="col-24 col-md-8">
+    <!-- <div class="col-24 col-md-8">
         <div class="infoBox Contact mb-1">
             <div class="centerStuff">Talk To Drew <i class="fas fa-phone-square-alt"></i></div>
         </div>
-    </div>
+    </div> -->
 </div>
 <div id="dreamBox" [hidden]="!checkBox('DREAMS')">
     <div class="col-24 p-3 bg-light h2 text-center">It All Starts with A Vision</div>
-    <div class="d-none d-sm-block col-sm-22 offset-sm-1 dreamBox p-3 col-table-container" myMatchHeight="card">
-        <div class="col-24 col-sm-12 col-xl-8 float-left card" *ngFor="let card1 of dreamData; let i = index">
-            <div class="col-24 insideBox">
-                <div class="icon"><i [ngClass]="getIcon(card1.icon)"></i></div>
-                <div class="heading text-center">{{card1.title}}</div>
+    <div class="d-none d-sm-block col-sm-22 offset-sm-1 dreamBox p-3 col-table-container">
+        <div class="col-24 col-sm-12 col-xl-8 float-left" *ngFor="let card1 of dreamData; let i = index">
+            <div class="col-24 insideBox my-2">
+                <div class="icon mb-2 col-24"><i [ngClass]="getIcon(card1.icon)"></i></div>
+                <div class="heading text-center my-1">{{card1.title}}</div>
                 <div class="col-20 offset-2 mt-2">
                     <p class="mt-1 line-breaks text-justify">{{card1.content}}</p>
                 </div>
@@ -187,6 +187,6 @@
             Connect With Drew
         </div>
         <div class="text-center font-x-small">All Images copyright drewgarby.com @ 2021, All Images without a mask are
-            taken prior to Covid-19 Pandemic</div>
+            taken prior to the Covid-19 Pandemic</div>
     </div>
 </div>
